@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="time7.c">
+    <ClCompile Include="Sound.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
