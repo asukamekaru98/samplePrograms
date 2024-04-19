@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="time7.c" />
+    <ClCompile Include="getDaysDiff.c" />
+    <ClCompile Include="typedef.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="const.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
