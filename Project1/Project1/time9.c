@@ -13,8 +13,8 @@ typedef struct
 } TIME;
 
 int days_in_month[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-const unsigned char LeapYearTbl[12] = { 31,29,31,30,31,30,31,31,30,31,30,31 };
-const unsigned char NormalYearTbl[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+unsigned char LeapYearTbl[12] = { 31,29,31,30,31,30,31,31,30,31,30,31 };
+unsigned char NormalYearTbl[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
 
 int IsLeapYear(unsigned short uhYear)
 {
@@ -71,8 +71,8 @@ static int CalcSecondDiff(TIME tTimeL, TIME tTimeR)
 
 int main()
 {
-    TIME tHistoryExpTime = { 0,23,12,31,23,59,59 };
-    TIME tCurrentTime = { 0,23,12,31,23,59,58 };
+    TIME tHistoryExpTime = { 0,24,4,23,23,59,59 };
+    TIME tCurrentTime = { 0,24,4,24,0,0,0 };
 
 
     int timediff;
