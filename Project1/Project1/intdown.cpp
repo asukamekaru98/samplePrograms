@@ -1,15 +1,29 @@
 #include<stdio.h>
 
 #define intdown(x,y)	(((x)/(y))*(y))
+#define intup(x,y)		((((x)+(y)-1)/(y))*(y))
 
 int main()
 {
-	unsigned int ucCurrentCategoryIndex = 5;
-	unsigned int uiMaxCategoryOnePage = 4;
+	unsigned int ucCurrentCategoryIndex;
+	unsigned int uiMaxCategoryOnePage = 2;	//1do
 
-	for (int i = 1; i <= 8; i++) {
+	for (ucCurrentCategoryIndex = 1; ucCurrentCategoryIndex <= 8; ucCurrentCategoryIndex++) {
 		int j = intdown((ucCurrentCategoryIndex - 1), uiMaxCategoryOnePage) + 1;
+		int k = intdown((ucCurrentCategoryIndex - 1), uiMaxCategoryOnePage) + uiMaxCategoryOnePage;
 
-		printf("%d", j);
+		printf("現在ページ%dで、最大タブ数%dのとき、左端は%d、右端は%d\n", ucCurrentCategoryIndex, uiMaxCategoryOnePage,j,k);
+
 	}
+
+	uiMaxCategoryOnePage = 4;
+
+	for (ucCurrentCategoryIndex = 1; ucCurrentCategoryIndex <= 8; ucCurrentCategoryIndex++) {
+		int j = intdown((ucCurrentCategoryIndex - 1), uiMaxCategoryOnePage) + 1;
+		int k = intdown((ucCurrentCategoryIndex - 1), uiMaxCategoryOnePage) + uiMaxCategoryOnePage;
+
+		printf("現在ページ%dで、最大タブ数%dのとき、左端は%d、右端は%d\n", ucCurrentCategoryIndex, uiMaxCategoryOnePage, j, k);
+
+	}
+
 }
