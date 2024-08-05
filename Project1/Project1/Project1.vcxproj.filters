@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ParseBluetoothCmd.cpp">
+    <ClCompile Include="counter.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

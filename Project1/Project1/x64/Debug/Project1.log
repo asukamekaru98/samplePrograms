@@ -1,3 +1,2 @@
-﻿  ParseBluetoothCmd.cpp
-D:\git\samplePrograms\Project1\Project1\ParseBluetoothCmd.cpp(11,10): warning C4101: 'deviceCnt': ローカル変数は 1 度も使われていません。
+﻿  counter.c
   Project1.vcxproj -> D:\git\samplePrograms\Project1\x64\Debug\Project1.exe
