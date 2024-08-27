@@ -2,23 +2,46 @@
 
 #include <stdio.h>
 
+void Cutting(const int iCutInterval, int* pCutCounter)
+{
+	if (iCutInterval == *pCutCounter) {
+		printf("カット開始！\n");
+		*pCutCounter = 0; //カウンター初期化
+	}
+}
+
+
+void charPrint(int iAllPage,int iPage)
+{
+	printf("合計%d枚のうち、%d枚印刷完了\n", iAllPage,iPage);
+}
+
 int main()
 {
-	const int iPrintNum = 20;
-	const int iCutInterval = 10;
-	int iFix, iPrint;
+	const int iAllPrintNum = 20;			//合計印刷枚数
+	const int iCutInterval = 10;		//カットインターバル
+	int iFix, iPrint,iCutterCounter = 0;
 
-	for (int iCnt = 0;iCnt <= iPrintNum; iCnt++) {
 
-		if (iCnt == 0) {
-			iPrint = 0;
-		}
-		else {
-			iFix = iCnt % iCutInterval;
-			iPrint = (iFix == 0) ? iCutInterval : iFix;
-		}
+	for (int iPrintCnt = 0;iPrintCnt <= iAllPrintNum; iPrintCnt++) {
 
-		printf("%d\n", iPrint);
+	
+		//if (iCnt == 0) {
+		//	iPrint = 0;
+		//}
+		//else {
+		//	iFix = iCnt % iCutInterval + 1;
+		//	iPrint = (iFix == 0) ? iCutInterval : iFix;
+		//}
+		iCutterCounter = iPrintCnt % iCutInterval;
+		
+
+		charPrint(iAllPrintNum, iPrintCnt);
+		
+		printf("カットカウンター：%d\n", iCutterCounter);
+		Cutting(iCutInterval, &iCutterCounter);
+		printf("カットカウンター：%d\n", iCutterCounter);
+		printf("----------------------------------\n", iCutterCounter);
 	}
 }
 

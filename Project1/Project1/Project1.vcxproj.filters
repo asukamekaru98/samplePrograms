@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="counter.c">
+    <ClCompile Include="TrimEmptyArray.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
